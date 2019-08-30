@@ -11,15 +11,15 @@ public class A1Novice {
 		int totalCustomers = scan.nextInt();
 		
 		for (int i = 0; i <= totalCustomers; i++) {
-			String[] names;
+			String[] names = new String[2];
 			names[0] = scan.next();
 			names[1] = scan.next();
 			
 			int items = scan.nextInt();
 			
-			int[] quantityArray;
-			String[] itemNames;		
-			double[] priceArray;
+			int[] quantityArray = new int[items];
+			String[] itemNames = new String[items];		
+			double[] priceArray = new double[items];
 			
 			for (int j = 0; j <= items; j++) {
 				
@@ -29,9 +29,11 @@ public class A1Novice {
 			}
 			
 			double total = totalPrice(quantityArray, priceArray);
-			System.out.println(names[0].charAt(0) + ". " + names[1] + ": " + String.format("%.2f, total"))
+			System.out.println(names[0].charAt(0) + ". " + names[1] + ": " + String.format("%.2f", total));
 			
 		}
+		
+		scan.close();
 		
 	}
 	
