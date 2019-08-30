@@ -24,13 +24,11 @@ public class A1Novice {
 			for (int j = 0; j < items; j++) {
 				
 				quantityArray[j] = scan.nextInt();
-			//	System.out.println(quantityArray[j]);
 				itemNames[j] = scan.next();
 				priceArray[j] = scan.nextDouble();
 			}
 			
 			double total = totalPrice(quantityArray, priceArray);
-			// System.out.println(names[0].charAt(1));
 			System.out.println(names[0].charAt(0) + ". " + names[1] + ": " + String.format("%.2f", total));
 			
 		}
