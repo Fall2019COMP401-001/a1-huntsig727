@@ -33,6 +33,7 @@ public class A1Novice {
 			
 		}
 		
+		scan.close();
 		
 	}
 	
