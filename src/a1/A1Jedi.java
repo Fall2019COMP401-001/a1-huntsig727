@@ -53,13 +53,15 @@ public class A1Jedi {
 					if (foodNames[w].equals(nameOfItems[y])) {	
 						numberOfPplEachFood[w]++;
 					}
-					for (int l = nameOfItems.length; l > nameOfItems.length; l--) {
-						if (foodNames[w].equals(nameOfItems[l]) & w != l) {
-							numberOfPplEachFood[w] --;
+					for (int k = foodNames.length - 1; k > foodNames.length; k--) {
+						if (nameOfItems[y].equals(nameOfItems[k]) & k != y) {
+							numberOfPplEachFood[w]--;
 						}
-					}
 					
 				}
+			
+				
+			}
 		}
 		}
 		for (int i = 0; i < amountsOfEachFood.length; i++) {
@@ -69,9 +71,8 @@ public class A1Jedi {
 				System.out.println(numberOfPplEachFood[i] + " customers bought " + amountsOfEachFood[i] + " " + foodNames[i]);
 			}
 		}
+		}
 	}
-}
-					
 					
 					
 //			for (int z = 0; z < foodNames.length; z++) {
