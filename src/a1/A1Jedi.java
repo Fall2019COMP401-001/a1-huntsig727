@@ -45,7 +45,7 @@ public class A1Jedi {
 				for (int w = 0; w < foodNames.length; w++) {
 					if (foodNames[w].equals(nameOfItems[y])) {
 						amountsOfEachFood[w] += numberOfEach[y];
-						numberOfPplEachFood[w] += 1;
+						numberOfPplEachFood[w]++;
 					}
 				}
 		}				
