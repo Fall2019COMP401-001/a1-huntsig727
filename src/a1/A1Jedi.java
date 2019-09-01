@@ -45,10 +45,19 @@ public class A1Jedi {
 				for (int w = 0; w < foodNames.length; w++) {
 					if (foodNames[w].equals(nameOfItems[y])) {
 						amountsOfEachFood[w] += numberOfEach[y];
+					}
+				}
+		}	
+			for (int y = 0; y < nameOfItems.length; y++) {
+				for (int w = 0; w < foodNames.length; w++) {
+					if (foodNames[w].equals(nameOfItems[y+1]) || foodNames[w].equals(nameOfItems[y+2])) {
+						continue;
+					}
+					if (foodNames[w].equals(nameOfItems[y])) {	
 						numberOfPplEachFood[w]++;
 					}
 				}
-		}				
+		}
 		}
 		for (int i = 0; i < amountsOfEachFood.length; i++) {
 			if (amountsOfEachFood[i] == 0) {
