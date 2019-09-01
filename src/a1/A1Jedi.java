@@ -28,9 +28,12 @@ public class A1Jedi {
 		int[] amountsOfEachFood = new int[foodNames.length];
 		int[] numberOfPplEachFood = new int[foodNames.length];
 		
+		
 		for (int i = 0; i < totalCustomers; i++) {
 			customerNames[i] = scan.next() + scan.next();
 			numberOfItems[i] = scan.nextInt();
+			
+			int[] alreadyPurchased = new int[foodNames.length];
 			
 			int[] numberOfEach = new int[numberOfItems[i]];
 			String[] nameOfItems = new String[numberOfItems[i]];
@@ -48,20 +51,28 @@ public class A1Jedi {
 					}
 				}
 		}	
+
+			
 			for (int y = 0; y < nameOfItems.length; y++) {
 				for (int w = 0; w < foodNames.length; w++) {
-					if (foodNames[w].equals(nameOfItems[y])) {	
+					if (foodNames[w].equals(nameOfItems[y]) && (alreadyPurchased[w] != 1)) {	
 						numberOfPplEachFood[w]++;
+						alreadyPurchased[w]++;
 					}
-					for (int k = foodNames.length - 1; k > foodNames.length; k--) {
-						if (nameOfItems[y].equals(nameOfItems[k]) & k != y) {
-							numberOfPplEachFood[w]--;
-						}
 					
-				}
-			
 				
 			}
+//				for (int k = foodNames.length - 1; k > foodNames.length; k--) {
+//					if (nameOfItems[y].equals(nameOfItems[k]) & k != y) {
+//						for (int v = 0; v < foodNames.length; v++) {
+//							if (foodNames[v].equals(nameOfItems[y])) {
+//								numberOfPplEachFood[v]--;
+//							}
+//						}
+//					}
+//				
+//			}
+		
 		}
 		}
 		for (int i = 0; i < amountsOfEachFood.length; i++) {
